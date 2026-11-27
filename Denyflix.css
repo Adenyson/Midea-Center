@@ -1,0 +1,297 @@
+
+/* ======================================
+   DENYFLIX — LIQUID GLASS
+   Jellyfin 12.4
+   ====================================== */
+
+:root {
+    /* Identidade Netflix */
+    --jf-palette-primary-main: #E50914 !important;
+    --jf-palette-secondary-main: #E50914 !important;
+    --jf-palette-primary-dark: #99000A !important;
+    --jf-palette-secondary-dark: #99000A !important;
+}
+
+/* FUNDO ESCURO */
+html,
+body {
+    background-color: #09090C !important;
+}
+
+/* CABEÇALHO — VIDRO FOSCO */
+.MuiAppBar-root,
+.skinHeader {
+    background: rgba(15, 15, 19, 0.58) !important;
+    backdrop-filter: blur(24px) saturate(155%) !important;
+    -webkit-backdrop-filter: blur(24px) saturate(155%) !important;
+    box-shadow: 0 1px 0 rgba(255,255,255,.08) !important;
+}
+
+/* BARRA DE NAVEGAÇÃO TRANSPARENTE */
+.MuiToolbar-root,
+.headerTabs,
+.headerTop {
+    background: transparent !important;
+}
+
+/* CARTÕES — VIDRO ESCURO */
+.visualCardBox {
+    background: rgba(28, 25, 30, .58) !important;
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 14px !important;
+}
+
+/* FOCO DO CONTROLE — BORDA VERMELHA
+   Seletores usados pelo próprio Jellyfin */
+.card:focus .cardBox.visualCardBox,
+.card:focus .cardBox:not(.visualCardBox) .cardScalable {
+    border-color: #E50914 !important;
+    box-shadow: 0 0 0 2px rgba(229,9,20,.75),
+                0 0 18px rgba(229,9,20,.28) !important;
+}
+
+/* NÃO COLORIR CARTÕES SEM FOCO */
+.card:not(:focus) .cardBox.visualCardBox {
+    border-color: rgba(255,255,255,.12) !important;
+    box-shadow: none !important;
+}
+
+/* PROGRESSO DOS FILMES */
+.itemProgressBarForeground {
+    background: #E50914 !important;
+}
+
+/* ABAS ATIVAS */
+.emby-tab-button-active {
+    color: #FFFFFF !important;
+    border-bottom: 2px solid #E50914 !important;
+}
+
+/* =========================================
+   DENYFLIX — CAMADA LIQUID GLASS
+   Complemento: preservar seleção vermelha
+   ========================================= */
+
+/* Cabeçalho: vidro escuro translúcido */
+.MuiAppBar-root,
+.skinHeader {
+    background: linear-gradient(
+        135deg,
+        rgba(35, 29, 35, .68),
+        rgba(12, 12, 17, .48)
+    ) !important;
+
+    -webkit-backdrop-filter: blur(28px) saturate(180%) !important;
+    backdrop-filter: blur(28px) saturate(180%) !important;
+
+    border-bottom: 1px solid rgba(255,255,255,.16) !important;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.12),
+        0 8px 30px rgba(0,0,0,.20) !important;
+}
+
+/* Painéis e menus */
+.MuiPaper-root,
+.paperList,
+.dialog {
+    background: linear-gradient(
+        145deg,
+        rgba(48, 43, 50, .72),
+        rgba(17, 16, 21, .76)
+    ) !important;
+
+    -webkit-backdrop-filter: blur(24px) saturate(165%) !important;
+    backdrop-filter: blur(24px) saturate(165%) !important;
+
+    border: 1px solid rgba(255,255,255,.13) !important;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.12),
+        0 12px 35px rgba(0,0,0,.22) !important;
+}
+
+/* Cartões: superfície de vidro */
+.visualCardBox,
+.cardBox.visualCardBox {
+    background: linear-gradient(
+        145deg,
+        rgba(48, 43, 50, .62),
+        rgba(17, 16, 21, .72)
+    ) !important;
+
+    -webkit-backdrop-filter: blur(18px) saturate(160%) !important;
+    backdrop-filter: blur(18px) saturate(160%) !important;
+
+    border: 1px solid rgba(255,255,255,.16) !important;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.18),
+        inset 0 -1px 0 rgba(255,255,255,.04),
+        0 8px 24px rgba(0,0,0,.20) !important;
+
+    border-radius: 16px !important;
+}
+
+/* Reflexo sutil nas superfícies */
+.MuiAppBar-root,
+.MuiPaper-root,
+.visualCardBox {
+    background-clip: padding-box !important;
+}
+
+/* Manter a identidade vermelha do Denyflix */
+:root {
+    --jf-palette-primary-main: #E50914 !important;
+    --jf-palette-secondary-main: #E50914 !important;
+}
+
+/* Não alterar o posicionamento do cabeçalho */
+.MuiToolbar-root,
+.headerTop,
+.headerTabs {
+    background-color: transparent !important;
+}
+
+
+
+
+
+/* DENYFLIX — ÍCONES LIQUID GLASS */
+
+/* Botões do cabeçalho */
+.MuiAppBar-root .MuiIconButton-root,
+.skinHeader .headerButton,
+.skinHeader .paper-icon-button-light {
+    background: linear-gradient(
+        145deg,
+        rgba(255,255,255,.18),
+        rgba(255,255,255,.045)
+    ) !important;
+
+    border: 1px solid rgba(255,255,255,.22) !important;
+    border-radius: 50% !important;
+
+    backdrop-filter: blur(18px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(18px) saturate(180%) !important;
+
+    box-shadow:
+        inset 0 1px 1px rgba(255,255,255,.22),
+        0 4px 14px rgba(0,0,0,.22) !important;
+
+    transition: background .2s ease, box-shadow .2s ease;
+}
+
+/* Foco pelo controle do Xbox */
+.MuiAppBar-root .MuiIconButton-root:focus-visible,
+.skinHeader .headerButton:focus-visible,
+.skinHeader .paper-icon-button-light:focus-visible {
+    background: rgba(229,9,20,.25) !important;
+    border-color: #E50914 !important;
+
+    box-shadow:
+        inset 0 1px 1px rgba(255,255,255,.2),
+        0 0 0 2px #E50914,
+        0 0 18px rgba(229,9,20,.28) !important;
+}
+
+/* Ícones brancos */
+.MuiAppBar-root .MuiIconButton-root svg,
+.skinHeader .headerButton svg {
+    color: #FFFFFF !important;
+    fill: currentColor;
+}
+
+
+/* ====================================
+   DENYFLIX — CORREÇÕES PARA XBOX / TV
+   ==================================== */
+
+/* Recuperar foto do perfil */
+.headerUserButton {
+    display: inline-flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+    flex-shrink: 0 !important;
+    position: relative !important;
+    width: 2.8em !important;
+    height: 2.8em !important;
+    min-width: 2.8em !important;
+    min-height: 2.8em !important;
+}
+
+.headerUserButton img,
+.headerUserButton .headerUserButtonImage {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border-radius: 50% !important;
+}
+
+/* Não deixar o perfil ser comprimido */
+.skinHeader .headerRight {
+    flex-shrink: 0 !important;
+    overflow: visible !important;
+}
+
+/* Logo no cabeçalho clássico / TV */
+.layout-tv .pageTitleWithDefaultLogo.pageTitleWithLogo {
+    width: 8em !important;
+    min-width: 8em !important;
+    max-width: 8em !important;
+    height: 2.8em !important;
+    background-size: contain !important;
+    background-position: left center !important;
+    background-repeat: no-repeat !important;
+    flex-shrink: 0 !important;
+}
+
+/* Logo no cabeçalho moderno */
+.layout-tv .MuiButton-root:has(.MuiButton-startIcon img) {
+    flex-shrink: 0 !important;
+    min-width: max-content !important;
+    overflow: visible !important;
+}
+
+.layout-tv .MuiButton-startIcon img {
+    max-width: 8em !important;
+    max-height: 2.8em !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain !important;
+}
+
+
+/* DENYFLIX — CORREÇÃO DOS ÍCONES VOLTAR E HOME */
+
+/* Impedir ampliação exagerada dos botões de navegação */
+.skinHeader .headerBackButton,
+.skinHeader .headerHomeButton,
+.skinHeader .headerButton[ is="emby-button" ] {
+    transform: none !important;
+}
+
+/* Foco: manter tamanho e evitar cortes nas laterais */
+.skinHeader .headerBackButton:focus,
+.skinHeader .headerHomeButton:focus,
+.skinHeader .headerBackButton.show-focus:focus,
+.skinHeader .headerHomeButton.show-focus:focus {
+    transform: none !important;
+    scale: 1 !important;
+    outline: none !important;
+}
+
+/* Preservar o vidro arredondado */
+.skinHeader .headerBackButton,
+.skinHeader .headerHomeButton {
+    border-radius: 50% !important;
+    overflow: visible !important;
+    flex-shrink: 0 !important;
+    box-sizing: border-box !important;
+}
