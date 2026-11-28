@@ -12,11 +12,6 @@
     --jf-palette-secondary-dark: #99000A !important;
 }
 
-/* FUNDO ESCURO */
-html,
-body {
-    background-color: #09090C !important;
-}
 
 /* CABEÇALHO — VIDRO FOSCO */
 .MuiAppBar-root,
